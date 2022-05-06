@@ -14,10 +14,12 @@ def main():
         p1=input('Desea seguir calculando las probabilidades?(S/N):')
         if(p1=='S'or p1=='s'):
             p2=str(input('Desea que el peso a calcular sea superior o\ninferior a los 200 gramos\n(1) Superior\n(2) Inferior\nRespuesta: '))
+            print()
+            print()
             if(p2=='1'):
-                print()
+                p2_1=int(input('Introduzca un numero entero para marcar el peso:'))
             elif(p2=='2'):
-                print()
+                p2_2=int(input('Introduzca un numero entero para marcar el peso:'))
             else:
                 print('La respuesta debe ser un 1 o un 2')        
         elif(p1=='N'or p1=='n'):
