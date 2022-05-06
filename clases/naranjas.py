@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 from scipy.stats import norm
-import statistics
+import statistics as stats
 
 class op:
 
@@ -10,16 +11,22 @@ class op:
         print()
 
 
+    def pintar_dist_normal(self,min,max):
+        
+        # Plot between 0 and 400 with 1 steps.
+        x_axis = np.arange(min, max, 4)
+
+        # Calculating mean and standard deviation
+        mean = stats.mean(x_axis)
+        sd = stats.stdev(x_axis)
+
+        plt.plot(x_axis, norm.pdf(x_axis, mean, sd))
+        
+        plt.show()
+
 def main():
-    
+    op.pintar_dist_normal(0,400)
 
-# Plot between -10 and 10 with .001 steps.
-x_axis = np.arange(-20, 20, 0.01)
 
-# Calculating mean and standard deviation
-mean = statistics.mean(x_axis)
-sd = statistics.stdev(x_axis)
-
-plt.plot(x_axis, norm.pdf(x_axis, mean, sd))
-plt.show()
-
+if __name__=='__main__':
+    main()
