@@ -1,11 +1,12 @@
 from clases.operaciones import op
+from scipy.stats import norm
 
 
 def main():
     lista_final=[]
 
-
     #media 200g/desv tipic 30g/pruebas 100
+    
     print('===================================================')
     print('   La funcion del siguiente programa es calcular la')
     print('probabilidad de que una naranja tenga por encima o ')
