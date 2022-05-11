@@ -14,6 +14,7 @@ def main():
     print('===================================================\n')
     sigue=True
     while(sigue==True):
+        calculo=0
         p1=input('Desea seguir calculando las probabilidades?(S/N):')
         if(p1=='S'or p1=='s'):
             p2=str(input('Desea que el peso a calcular sea superior o\ninferior a los 200 gramos\n(1) Superior\n(2) Inferior\nRespuesta: '))
@@ -35,7 +36,7 @@ def main():
                     print('\n\n\nRESPUESTA NO VALIDA')
             elif(p2=='2'):
                 p2_2=int(input('Introduzca un numero entero para marcar el peso:'))
-                calculo=200-p2_1
+                calculo=200-p2_2
                 print('Desea calcular la probabilidad de que sea\nmayor o menor que {}.\n(1)Mayor que {}g\n(2)Menor que {}g'.format(str(calculo),str(calculo),str(calculo)))
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
