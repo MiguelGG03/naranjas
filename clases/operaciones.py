@@ -6,32 +6,40 @@ import statistics as stats
 class op:
 
     def calc_encima_mayor(self,num):
-        nnum=200-num
-        unum=nnum/30
-        calculo=norm.ppf(unum)
-        porcientonorm=100*calculo
-        return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200+num),str(porcientonorm))
+        if(num==0):
+            return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(norm.cdf(0)))
+        else:
+            unum=num/30
+            calculo=norm.ppf(unum)
+            porcientonorm=100*calculo
+            return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200+num),str(porcientonorm))
     
     def calc_encima_menor(self,num):
-        nnum=200-num
-        unum=nnum/30
-        calculo=norm.cdf(unum)
-        porcientonorm=100*calculo
-        return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(porcientonorm))
+        if(num==0):
+            return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(norm.cdf(0)))
+        else:
+            unum=num/30
+            calculo=norm.cdf(unum)
+            porcientonorm=100*calculo
+            return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(porcientonorm))
         
     def calc_debajo_mayor(self,num):
-        nnum=200-num
-        unum=nnum/30
-        calculo=norm.cdf(unum)
-        porcientonorm=100*calculo
-        return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200-num),str(porcientonorm))        
+        if(num==0):
+            return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(norm.cdf(0)))
+        else:    
+            unum=-num/30
+            calculo=norm.cdf(unum)
+            porcientonorm=100*calculo
+            return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200-num),str(porcientonorm))        
 
     def calc_debajo_menor(self,num):
-        nnum=200-num
-        unum=nnum/30
-        calculo=norm.ppf(unum)
-        porcientonorm=100*calculo
-        return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200-num),str(porcientonorm))        
+        if(num==0):
+            return 'La probabilidad de que una naranja pese menos de {} gramos es de {} %'.format(str(200+num),str(norm.cdf(0)))
+        else:
+            unum=-num/30
+            calculo=norm.ppf(unum)
+            porcientonorm=100*calculo
+            return 'La probabilidad de que una naranja pese mas de {} gramos es de {} %'.format(str(200-num),str(porcientonorm))        
 
 
     def pintar_dist_normal(self,min,max):
