@@ -9,7 +9,7 @@ def main():
     print('por debajo de un peso determinado sabiendo que la  ')
     print('media de los pesos de las naranjas es 200 gramos.')
     print('===================================================\n\n\n')
-    sigue=False
+    sigue=True
     while(sigue==True):
         temp=0
         p1=input('Desea seguir calculando las probabilidades?(S/N):')
@@ -49,6 +49,9 @@ def main():
             sigue=False
         else:
             print('Debe introducir una S o una N')
+
+
+            
     pregunta_final=str(input('Desea imprimir todas las probabilidades calculadas?\n(1/s/S)Si\n(2/n/N)No'))
     if(pregunta_final=='1' or pregunta_final=='S' or pregunta_final=='s'):
         for i in lista_final:
