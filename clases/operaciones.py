@@ -4,11 +4,11 @@ from scipy.stats import norm
 import statistics as stats
 
 class op:
+    
     def __init__(self):
         distr=stats.NormalDist(200,30)
         self.distr=distr
 
-    #media 200g/desv tipic 30g/pruebas 100
     def calc_encima_mayor(self,num):
         nnum=200-num
         unum=nnum/30
