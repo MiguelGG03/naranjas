@@ -1,14 +1,22 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 from scipy.stats import norm
 import statistics as stats
 
 class op:
+    def __init__(self):
+        distr=stats.NormalDist(200,30)
+        self.distr=distr
 
     #media 200g/desv tipic 30g/pruebas 100
     def calc_encima(self,num):
-        print()
+        nnum=200-num
+        unum=nnum/30
+        norm.cdf(unum)
+        porcientonorm=
+        return 'La probabilidad'
+        
+        
 
 
     def pintar_dist_normal(self,min,max):
