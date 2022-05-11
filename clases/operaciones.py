@@ -4,10 +4,6 @@ from scipy.stats import norm
 import statistics as stats
 
 class op:
-    
-    def __init__(self):
-        distr=stats.NormalDist(200,30)
-        self.distr=distr
 
     def calc_encima_mayor(self,num):
         nnum=200-num
@@ -36,10 +32,6 @@ class op:
         calculo=norm.ppf(unum)
         porcientonorm=100*calculo
         return 'La probabilidad de que una naranja pese mas de {} gramos es de {}%'.format(str(200-num),str(porcientonorm))        
-
-
-
-
 
 
     def pintar_dist_normal(self,min,max):
