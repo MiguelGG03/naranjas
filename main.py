@@ -23,7 +23,11 @@ def main():
                 print('Desea calcular la probabilidad de que sea\nmayor o menor que {}.\n(1)Mayor que {}g\n(2)Menor que {}g'.format(str(calculo),str(calculo),str(calculo)))
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
+                    calc=op.calc_encima_mayor(p2_1)
+                    lista_final.append(calc)
                 elif(pfr=='2'):
+                    calc=op.calc_encima_menor(p2_1)
+                    lista_final.append(calc)
                 else:
                     print('\n\n\nRESPUESTA NO VALIDA')
             elif(p2=='2'):
@@ -32,7 +36,11 @@ def main():
                 print('Desea calcular la probabilidad de que sea\nmayor o menor que {}.\n(1)Mayor que {}g\n(2)Menor que {}g'.format(str(calculo),str(calculo),str(calculo)))
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
+                    calc=op.calc_debajo_mayor(p2_2)
+                    lista_final.append(calc)
                 elif(pfr=='2'):
+                    calc=op.calc_debajo_menor(p2_2)
+                    lista_final.append(calc)
                 else:
                     print('\n\n\nRESPUESTA NO VALIDA')
             else:
