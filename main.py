@@ -18,18 +18,18 @@ def main():
         if(p1=='S'or p1=='s'):
             p2=str(input('Desea que el peso a calcular sea superior o\ninferior a los 200 gramos\n(1) Superior\n(2) Inferior\nRespuesta: '))
             print()
-            print()
             if(p2=='1'):
                 p2_1=int(input('Introduzca un numero entero para marcar el peso:'))
                 calculo=200+p2_1
                 print('Desea calcular la probabilidad de que sea\nmayor o menor que {}.\n(1)Mayor que {}g\n(2)Menor que {}g'.format(str(calculo),str(calculo),str(calculo)))
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
-                    calc=op.calc_encima_mayor(p2_1)
+                    calc=op.calc_encima_mayor(op,p2_1)
                     print(calc)
                     lista_final.append(calc)
                 elif(pfr=='2'):
-                    calc=op.calc_encima_menor(p2_1)
+                    calc=op.calc_encima_menor(op,p2_1)
+                    print(calc)
                     lista_final.append(calc)
                 else:
                     print('\n\n\nRESPUESTA NO VALIDA')
@@ -40,9 +40,11 @@ def main():
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
                     calc=op.calc_debajo_mayor(p2_2)
+                    print(calc)
                     lista_final.append(calc)
                 elif(pfr=='2'):
                     calc=op.calc_debajo_menor(p2_2)
+                    print(calc)
                     lista_final.append(calc)
                 else:
                     print('\n\n\nRESPUESTA NO VALIDA')
@@ -55,10 +57,12 @@ def main():
 
 
 
-    pregunta_final=str(input('Desea imprimir todas las probabilidades calculadas?\n(1/s/S)Si\n(2/n/N)No'))
+    pregunta_final=str(input('Desea imprimir todas las probabilidades calculadas?\n(1/s/S)Si\n(2/n/N)No\n'))
     if(pregunta_final=='1' or pregunta_final=='S' or pregunta_final=='s'):
+        print('-HISTORIAL\n===========================')
         for i in lista_final:
             print(i)
+        print('===========================')
     elif(pregunta_final=='1' or pregunta_final=='S' or pregunta_final=='s'):
         print('Cerrando programa...')
     else:
