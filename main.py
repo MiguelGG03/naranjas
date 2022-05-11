@@ -40,11 +40,11 @@ def main():
                 print('Desea calcular la probabilidad de que sea\nmayor o menor que {}.\n(1)Mayor que {}g\n(2)Menor que {}g'.format(str(calculo),str(calculo),str(calculo)))
                 pfr=str(input('-RESPUESTA: '))
                 if(pfr=='1'):
-                    calc=op.calc_debajo_mayor(p2_2)
+                    calc=op.calc_debajo_mayor(op,p2_2)
                     print(calc)
                     lista_final.append(calc)
                 elif(pfr=='2'):
-                    calc=op.calc_debajo_menor(p2_2)
+                    calc=op.calc_debajo_menor(op,p2_2)
                     print(calc)
                     lista_final.append(calc)
                 else:
