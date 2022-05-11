@@ -6,7 +6,7 @@ def main():
     lista_final=[]
 
     #media 200g/desv tipic 30g/pruebas 100
-    
+
     print('===================================================')
     print('   La funcion del siguiente programa es calcular la')
     print('probabilidad de que una naranja tenga por encima o ')
@@ -61,10 +61,11 @@ def main():
 
     pregunta_final=str(input('Desea imprimir todas las probabilidades calculadas?\n(1/s/S)Si\n(2/n/N)No\n'))
     if(pregunta_final=='1' or pregunta_final=='S' or pregunta_final=='s'):
-        print('-HISTORIAL\n===========================')
+        print('-HISTORIAL\n=====================================================================================\n')
         for i in lista_final:
             print(i)
-        print('===========================')
+            print()
+        print('=====================================================================================')
     elif(pregunta_final=='1' or pregunta_final=='S' or pregunta_final=='s'):
         print('Cerrando programa...')
     else:
